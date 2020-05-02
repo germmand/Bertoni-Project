@@ -1,0 +1,17 @@
+@model List<Bertoni.Web.Models.CommentViewModel>
+
+<div class="container">
+    @if (!Model.Any()) {
+        <p>This photo has no comments!</p>
+    }
+    @foreach(var comment in Model) {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@comment.Name</h5>
+                <h6 class="card-subtitle">@comment.Email</h6>
+                <p class="card-text">@comment.Body</p>
+            </div>
+        </div>
+        <br />
+    }
+</div>

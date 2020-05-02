@@ -60,7 +60,7 @@ namespace Bertoni.Web.Controllers
         {
             var comments = await _typicodeService.GetCommentsAsync(photoId);
             var commentsViewModel = _mapper.Map<List<CommentViewModel>>(comments);
-            return Json(new { comments = commentsViewModel });
+            return PartialView("_PhotoComments", commentsViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

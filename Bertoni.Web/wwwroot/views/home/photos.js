@@ -5,8 +5,8 @@ $(document).ready(function() {
             type: 'GET',
             url: `/Photos/${photoId}/Comments`,
             contentType: 'json',
-            success: function(result) {
-                console.log(result);
+            success: function(response) {
+                $("#comments-section").html(response);
             },
             failure: function(error) {
                 console.log(error);
