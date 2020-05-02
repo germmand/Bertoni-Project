@@ -6,20 +6,25 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Bertoni.Web.Models;
+using Bertoni.Core.Services;
 
 namespace Bertoni.Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ITypicodeService _typicodeService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,
+                              ITypicodeService typicodeService)
         {
             _logger = logger;
+            _typicodeService = typicodeService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var albums = await _typicodeService.GetAlbumsAsync();
             return View();
         }
 

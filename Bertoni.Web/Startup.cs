@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Bertoni.Core.Services;
+using Bertoni.Web.Services;
 
 namespace Bertoni.Web
 {
@@ -24,6 +26,7 @@ namespace Bertoni.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHttpClient<ITypicodeService, TypicodeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
