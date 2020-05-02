@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Bertoni.Core.Services;
 using Bertoni.Web.Services;
+using AutoMapper;
 
 namespace Bertoni.Web
 {
@@ -27,6 +28,7 @@ namespace Bertoni.Web
         {
             services.AddControllersWithViews();
             services.AddHttpClient<ITypicodeService, TypicodeService>();
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,41 @@
+@model List<Bertoni.Web.Models.PhotosViewModel>
+@{
+    ViewData["Title"] = "Photos";
+}
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Album</th>
+                <th scope="col">Title</th>
+                <th scope="col">Url</th>
+                <th scope="col">Thumbail</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var photo in Model) {
+                <tr>
+                    <th scope="row">@photo.Id</th>
+                    <td>@photo.AlbumId</td>
+                    <td>@photo.Title</td>
+                    <td>
+                        <a href="@photo.Url" class="streched-link" target="_blank">Open url</a>
+                    </td>
+                    <td>
+                        <a href="@photo.ThumbnailUrl" class="streched-link" target="_blank">Open thumbail</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-dark comment-handler" photo-id="@photo.Id">Load comments</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/views/home/photos.js"></script>
+}
