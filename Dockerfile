@@ -11,5 +11,4 @@ RUN dotnet publish -c Release -o WebApp
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
 WORKDIR /app
 COPY --from=build-env /app/WebApp .
-ENTRYPOINT ["dotnet"]
-CMD ["Bertoni.Web.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet Bertoni.Web.dll
