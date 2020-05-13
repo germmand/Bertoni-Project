@@ -1,0 +1,34 @@
+version: 2.1
+
+executors:
+  dotnet-executor:
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.0
+
+jobs:
+  build:
+    executor: dotnet-executor
+    steps:
+      - checkout 
+      - run:
+          name: Restore packages
+          command:
+            dotnet restore
+      - run: 
+          name: Build App
+          command:
+            dotnet build --no-restore -c Release
+      - run:
+          name: Run test suites
+          command:
+            dotnet test --no-build -c Release
+      - run:
+          name: Publish App
+          command:
+            dotnet publish --no-build -c Release
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
