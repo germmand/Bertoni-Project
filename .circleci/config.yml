@@ -5,6 +5,9 @@ executors:
     docker:
       - image: mcr.microsoft.com/dotnet/core/sdk:3.0
 
+orbs:
+  heroku: circleci/heroku@1.0.1
+
 jobs:
   build:
     executor: dotnet-executor
@@ -32,3 +35,9 @@ workflows:
   build-deploy:
     jobs:
       - build
+      - heroku/deploy-via-git:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
