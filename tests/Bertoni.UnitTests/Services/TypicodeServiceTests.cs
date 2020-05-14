@@ -13,7 +13,7 @@ using Bertoni.Web.Services;
 using Newtonsoft.Json;
 using FluentAssertions;
 
-namespace Bertoni.Tests.Services {
+namespace Bertoni.UnitTests.Services {
     public class TypicodeServiceTests 
     {
         public readonly ITypicodeService _typicodeService;

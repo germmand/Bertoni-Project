@@ -13,7 +13,7 @@ using FluentAssertions;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Bertoni.Tests.Controllers {
+namespace Bertoni.UnitTests.Controllers {
     public class HomeControllerTests {
         public readonly HomeController _homeController;
         public readonly Mock<ITypicodeService> _typicodeServiceMock;

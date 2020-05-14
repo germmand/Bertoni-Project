@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bertoni.Web", "Bertoni.Web\Bertoni.Web.csproj", "{21B18E73-651E-4447-BF2B-8B4B7C3DFBB6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{84F4A17A-2465-441E-A5AE-398C781BB451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bertoni.Tests", "Bertoni.Tests\Bertoni.Tests.csproj", "{0FA83250-4ED9-4800-A103-695505D91D2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bertoni.Core", "src\Bertoni.Core\Bertoni.Core.csproj", "{7E97DCB8-6A06-4FA9-957C-C27684684792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bertoni.Web", "src\Bertoni.Web\Bertoni.Web.csproj", "{21B18E73-651E-4447-BF2B-8B4B7C3DFBB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{23887A9C-036C-4D1F-9CDB-1BB6F0100E69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bertoni.UnitTests", "tests\Bertoni.UnitTests\Bertoni.UnitTests.csproj", "{2188BDE6-F981-4868-92FF-B736E87A4326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,5 +50,33 @@ Global
 		{0FA83250-4ED9-4800-A103-695505D91D2F}.Release|x64.Build.0 = Release|Any CPU
 		{0FA83250-4ED9-4800-A103-695505D91D2F}.Release|x86.ActiveCfg = Release|Any CPU
 		{0FA83250-4ED9-4800-A103-695505D91D2F}.Release|x86.Build.0 = Release|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Debug|x64.Build.0 = Debug|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Debug|x86.Build.0 = Debug|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Release|x64.ActiveCfg = Release|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Release|x64.Build.0 = Release|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Release|x86.ActiveCfg = Release|Any CPU
+		{7E97DCB8-6A06-4FA9-957C-C27684684792}.Release|x86.Build.0 = Release|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Debug|x64.Build.0 = Debug|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Debug|x86.Build.0 = Debug|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Release|x64.ActiveCfg = Release|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Release|x64.Build.0 = Release|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Release|x86.ActiveCfg = Release|Any CPU
+		{2188BDE6-F981-4868-92FF-B736E87A4326}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E97DCB8-6A06-4FA9-957C-C27684684792} = {84F4A17A-2465-441E-A5AE-398C781BB451}
+		{2188BDE6-F981-4868-92FF-B736E87A4326} = {23887A9C-036C-4D1F-9CDB-1BB6F0100E69}
 	EndGlobalSection
 EndGlobal
